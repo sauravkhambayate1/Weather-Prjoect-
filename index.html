@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>My Weather App</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <div class="main">
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">Weather App</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                    <div class="navbar-nav">
+                        <a class="nav-link" aria-current="page" href="#">Home</a>
+                        <a class="nav-link" href="#">About</a>
+                        <a class="nav-link" href="#">How to use</a>
+
+                    </div>
+                </div>
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Enter the city name" aria-label="Search"
+                        id="input-city">
+                    <button class="btn btn-outline-success" type="submit" id="search-btn">Search</button>
+                </form>
+            </div>
+        </nav>
+        <h1 style="text-align: center; font-weight: bold;" id="heading">Weather for <span id="cityname">Delhi</span>
+        </h1>
+        <main class="main-content">
+            <div class="row row-cols-1 row-cols-md-3 mb-3 text-center">
+                <div class="col">
+                    <div class="card mb-4 rounded-3 shadow-sm">
+                        <div class="card-header py-3 text-bg-primary border-primary">
+                            <h4 class="my-0 fw-normal">Temperatures Info</h4>
+                        </div>
+                        <div class="card-body">
+
+                            <h1 class="card-title pricing-card-title"><span id="temp1">10</span><small
+                                    class="text-muted fw-light">°C</small></h1>
+                            <ul class="list-unstyled mt-3 mb-4">
+                                <!-- <li>Temperature is: <span id="temp"></span><span class="celsius"></span>°C</li> -->
+                                <li>Min Temperature: <span id="min_temp"></span><span class="celsius"></span>°C</li>
+                                <li>Max Temperature: <span id="max_temp"></span><span class="celsius"></span>°C</li>
+
+                            </ul>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card mb-4 rounded-3 shadow-sm">
+                        <div class="card-header py-3 text-bg-primary border-primary">
+                            <h4 class="my-0 fw-normal">Humidity Info</h4>
+                        </div>
+                        <div class="card-body">
+                            <h1 class="card-title pricing-card-title"><span id="humidity1">22</span><small
+                                    class="text-muted fw-light">%</small></h1>
+                            <ul class="list-unstyled mt-3 mb-4">
+                                <!-- <li> Cloud-PCT is:<span id="cloud_pct"></span></li> -->
+                                <li> Wind_degrees: <span id="wind_degrees"></span><span class="celsius"></span>°C</li>
+                                <li>Feels Like: <span id="feels_like"></span></li>
+                                <li>Humidity: <span id="humidity"></span><span class="celsius"> </span>%</li>
+
+                            </ul>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card mb-4 rounded-3 shadow-sm border-primary">
+                        <div class="card-header py-3 text-bg-primary border-primary">
+                            <h4 class="my-0 fw-normal">Wind Info</h4>
+                        </div>
+                        <div class="card-body" id="card-3">
+
+                            <h1 class="card-title pricing-card-title"><span id="wind_speed1">2.57</span><small
+                                    class="text-muted fw-light">km/hr</small></h1>
+                            <ul class="list-unstyled mt-3 mb-4">
+
+
+                                <li>Wind_speed: <span id="wind_speed"></span></li>
+                                <li>Sunrise Time: <span id="sunrise"></span></li>
+                                <li>Sunset Time: <span id="sunset"></span></li>
+                            </ul>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <h2 class="display-6 text-center mb-4">Weather of other Cities</h2>
+
+            <div class="table-responsive">
+                <table class="table text-center">
+                    <thead>
+                        <tr>
+                            <th style="width: 30%;">Cloud_pct</th>
+                            <th>Feels_like</th>
+                            <th style="width: 15%;">Humidity</th>
+                            <th style="width: 5%;">Max_temp</th>
+                            <th style="width: 15%;">Min_temp</th>
+                            <th style="width: 5%;">Sunrise</th>
+                            <th style="width: 15%;">Sunset</th>
+                            <th style="width: 5%;">Temp</th>
+                            <th style="width: 15%;">Wind_speed</th>
+                            <th style="width: 15%;">Wind_degrees</th>
+
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row" class="text-start">Washington DC <img
+                                    src="usa.png"
+                                    alt="" width="30px"></th>
+                            <td>-1°C</td>
+                            <td>77%</td>
+                            <td>1°C</td>
+                            <td>-3°C</td>
+                            <td>1673180807</td>
+                            <td>1673215339</td>
+                            <td>1°C</td>
+                            <td>0.45</td>
+                            <td>261 deg</td>
+
+
+                        </tr>
+                        <tr>
+                            <th scope="row" class="text-start">Shanghai <img
+                                    src="china.png"
+                                    alt="" width="30px"></th>
+                            <td>12°C</td>
+                            <td>62%</td>
+                            <td>13°C</td>
+                            <td>8°C</td>
+                            <td>1673132020</td>
+                            <td>1673168821</td>
+                            <td>12°C</td>
+                            <td>2.68km/hr</td>
+                            <td>151 deg</td>
+
+                        </tr>
+                    </tbody>
+
+                    <tbody>
+                        <tr>
+                            <th scope="row" class="text-start">Bern <img
+                                    src="switzerland.png"
+                                    alt="" width="30px"></th>
+                            <td>5°C</td>
+                            <td>90%</td>
+                            <td>9°C</td>
+                            <td>7°C</td>
+                            <td>1673162086</td>
+                            <td>1673193496</td>
+                            <td>7°C</td>
+                            <td>2.68km/hr</td>
+                            <td>301 deg</td>
+
+                        </tr>
+                        <tr>
+                             <th scope="row" class="text-start">Kathmandu <img
+                                src="nepal.png"
+                                alt="" width="30px"> </th>
+                            <td>14°C</td>
+                            <td>36%</td>
+                            <td>12°C</td>
+                            <td>12°C</td>
+                            <td>1673140236</td>
+                            <td>1673177957</td>
+
+                            <td>15°C</td>
+                            <td>1.54 km/hr</td>
+                            <td>270 deg</td>
+
+                        </tr>
+
+                    </tbody>
+                </table>
+            </div>
+        </main>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"></script>
+    <script src="./main.js"></script>
+</body>
+
+</html>

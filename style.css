@@ -1,0 +1,44 @@
+.main{
+   
+    background-image: url("pexels-pixabay-314726.jpg");
+   background-repeat: no-repeat;
+   /* background-position: 100%; */
+    
+    /* width: 100%; */
+}
+
+.container-fluid{
+   position: absolute;
+   /* background-color: black;s */
+   color: white;
+   padding-top: 95px;
+}
+.nav-link, .navbar-brand{
+    padding-left: 15px;
+    margin: 15px;
+}
+
+ .nav-link:hover{
+    transform: scale(1.4,2);
+   /* box-shadow: 0 0  5px 5px  rgb(47, 45, 45) ; */
+}
+.navbar-brand:hover{
+    transform: scale(1.2,2);
+    /* box-shadow: 0 0  5px 5px  rgb(47, 45, 45) ; */
+    padding: 5px;
+}
+#heading{
+    /* padding: 28px; */
+    margin-top: 80px;
+}
+.card-body:hover{
+    box-shadow: 0 0  5px 5px  rgb(47, 45, 45) ;
+}
+#card-3{
+    line-height: 24px;
+}
+.main-content{
+    padding-top: 50px;
+    padding: 25px;
+}
+
